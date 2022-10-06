@@ -1,0 +1,137 @@
+p { /* styles for a tag */
+	font-family: cursive;
+	font-size: 30px;
+}
+
+#myDiv { /* styles for an id */
+	background-color: red;
+	border: 2px outset yellow;
+	border-radius: 20px;
+}
+
+.mySecondDiv { /* styles for a class */
+	width: 300px;
+	height: 400px;
+	margin-top: 50px;
+}
+
+.mySecondDiv:hover { /* styles for that same class but when user hovers */
+	width: 100px;
+	height: 150px;
+}
+
+body, html {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* font family */
+    background-image: url("images/bg.webp");
+	background-color: #eeeeee
+}
+
+* {
+  box-sizing: border-box; 
+}
+
+#clickButton {
+	width: 300px;
+	height: 350px;
+	margin-top: 60px;
+	box-shadow: 0 4px 8px 0 #000000;
+	border-radius: 8px;
+	transition-duration: 0.3s;
+	cursor: pointer; 
+    position: relative;
+    top: 170px;
+}
+
+#clickButton:hover {
+	box-shadow: 0 4px 8px 0 #000000;
+	border-radius: 20px;
+	transition-duration: 0.5s;
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+}
+
+/* when you click it, box shadow color will change again, it'll be even more rounder, and will go a bit bigger */
+#clickButton:active {
+	box-shadow: 0 4px 8px 0 #000000;
+	border-radius: 20px;
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1); 
+    transform: scale(01);
+}
+
+#info {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 40px;
+    position: relative;
+    bottom: 450px;
+}
+
+#appleCounter {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.number {
+	color: #000000;
+}
+
+#gameOver {
+	font-size: 30px;
+	color: #3188cc;
+	font-style: italic;
+}
+
+.itemContainer {
+    display: flex; /* using flexbox to align items */
+    flex-wrap: wrap; /* to force items on multiple lines */
+  }
+
+  .item {
+    padding: 10px; /* some spacing around */
+    flex: 25%; /* to put 4 items on each line (100/4 = 25) */
+  }
+  
+  /* each item image */
+  .itemImage {
+      height: 20%;
+      width: 20%;
+  }
+  
+  /* contains information about each item */
+  .containerText {
+      font-size: 16px;
+    text-align: center;
+  }
+  
+  /* contains buy button */
+  .buyButtonContainer {
+      margin-top: 20px;
+    }
+
+    .buyButton {
+        cursor: pointer;
+        text-align: center;
+        background: #0071e3;
+        color: #fff;
+        font-size: 17px;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+        padding-left: 11px;
+        padding-right: 11px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 12px;
+        border: none;
+    }
+    
+    /* on hover, makes button a bit lighter */
+    .buyButton:hover {
+        opacity: 1.5;
+    }
+
+    @media (max-width: 800px) { 
+        .item {
+          flex: 100%; /* makes one item on each line */
+        }
+      }
